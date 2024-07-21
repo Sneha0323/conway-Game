@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #282c34;
+  color: white;
+}
+.container{
+  background-color:rgb(186, 238, 221);
+  min-height: 100vh;
+  margin: auto;
+  border:15px solid blue;
+  padding: 6px 10%;
+  display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+  margin: 15px 0;
+  font-size: 3em;
+  font-weight: bolder;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 3px solid black;
+  border-radius: 20%;
+  font-size: large;
+  color: darkblue;
+  font-weight: bolder;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(30, 20px);
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 5px solid gray;
+}
+
+.alive {
+  background-color: black;
+}
+.Gamespace{
+display: contents;
+align-items: center;
 }
